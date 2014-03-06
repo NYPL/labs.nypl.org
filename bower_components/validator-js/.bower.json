@@ -1,0 +1,14 @@
+{
+  "name": "validator-js",
+  "homepage": "https://github.com/chriso/validator.js",
+  "version": "3.4.0",
+  "_release": "3.4.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "3.4.0",
+    "commit": "92937517f974b5891d622186f61508d9f0f8ae5a"
+  },
+  "_source": "git://github.com/chriso/validator.js.git",
+  "_target": "3.4.0",
+  "_originalSource": "validator-js"
+}
