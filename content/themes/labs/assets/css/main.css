@@ -10,6 +10,11 @@ a {
 a:hover {
   color: #32b8e5;
 }
+hr {
+  border-color: #ccc;
+  border-style: dashed;
+  margin: 20px 0;
+}
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -78,13 +83,13 @@ a:hover {
   left: 83.3333333333%;
 }
 .col-big ul {
-background: rgba(10,10,10,.5);
+background: rgba(175,175,175,.5);
 }
 .col-med ul {
-background: rgba(100,100,100,.5);
+background: rgba(200,200,200,.5);
 }
 .col-sml ul {
-background: rgba(200,200,200,.5);
+background: rgba(225,225,225,.5);
 }
 .col h2 {
   margin: 0;
@@ -102,18 +107,9 @@ background: rgba(200,200,200,.5);
 .col img {
   width: 100%;
 }
-@media (max-width: 800px) {
-  .col-big {
-    width: 41.6666666667%;
-  }
-  .col-med {
-    width: 33.3333333333%;
-    left: 41.6666666667%;
-  }
-  .col-sml {
-    width: 25%;
-    left: 75%;
-  }
+.col h2.col-title {
+  display: none;
+  margin: 20px 0;
 }
 
 #projects .col,
@@ -135,6 +131,92 @@ background: rgba(200,200,200,.5);
   width: 300px;
   height: 300px;
   overflow: hidden;
+}
+
+@media (max-width: 1000px) {
+  .col-big {
+    width: 33.3333333333%;
+  }
+  .col-med {
+    width: 33.3333333333%;
+    left: 33.3333333333%;
+  }
+  .col-sml {
+    width: 33.3333333333%;
+    left: 66.6666666667%;
+  }
+  .col ul {
+    margin: 0 6px;
+  }
+}
+@media (max-width: 500px) {
+  .top-bar {
+    position: relative;
+    width: auto;
+    height: auto;
+  }
+  .top-bar h1 {
+    float: none;
+  }
+  .nav {
+    float: none;
+  }
+  .nav li {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .col {    
+    position: relative;
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+    padding-top: 0;
+    margin-top: 0;
+    overflow: auto;
+    max-height: 3000px;
+  }
+  .col-header {
+    display: none;
+  }
+  .col h2.col-title {
+    display: block;
+  }
+  #projects .col,
+  #investigations .col,
+  #blog .col {
+    max-height: 0px;
+  }
+  #projects .col.active,
+  #investigations .col.active,
+  #blog .col.active {
+    width: auto;
+    max-height: 3000px;
+  }
+  .col.active li {
+    float: none;
+    width: auto;
+    height: auto;
+  }
+}
+
+article {
+  width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #eee;
+}
+article p {
+  font-size: 1.3em;
+}
+.post-title {
+  font-size: 2em;
+  margin-bottom: 0.3em;
+}
+article article {
+  width: auto;
+  margin: 10px 0;
+  padding: 0;
 }
 
 .icon {

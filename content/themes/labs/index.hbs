@@ -28,7 +28,8 @@
     </div>
 
     <div class="col col-big col-projects">
-
+      
+      <h2 class="col-title">Projects</h2>
 
 
 
@@ -44,32 +45,32 @@
 
 <!-- 
         <li>
-          <img src="http://placepuppy.it/450/200/" />
+          <img src="http://placecage.com/450/200/" />
           <h4>Building Inspector</h4>
           <p>Our latest collaboration with the Map Division, Building Inspector is a mobile-friendly web app for improving information extracted from 19th century New York City insurance atlases. Out of a recent <a href="http://www.nypl.org/blog/2013/07/12/maphack-hacking-nycs-past-nypl-labs-friends">hack event</a>, we developed a computer vision <a href="https://github.com/NYPL/map-vectorizer" rel="nofollow">process</a> that can identify building shapes and other data from georectified atlas sheets (kind of like OCR for maps). The output is good, but not perfect, so <a href="http://buildinginspector.nypl.org">Building Inspector</a> crowdsources the quality control, inviting users to check the computer's work, building by building. Kill time, make history. It's easy (and addictive).</p>
         </li>
         <li>
-          <img src="http://placepuppy.it/450/200/" />
+          <img src="http://placecage.com/450/200/" />
           <h4>NYPL Digital Collections</h4>
           <p>Labs has been working with NYPL's Digital Repository team on a new interface for the Library's vast digital collections website. Currently in beta, the new service is powered by NYPL's recently opened <a href="http://api.repo.nypl.org/">Digital Collections API</a> and over time will become the Library's central access point for digitized and born-digital materials of all formats.</p>
         </li>
         <li>
-          <img src="http://placepuppy.it/450/200/" />
+          <img src="http://placecage.com/450/200/" />
           <h4>NYPL Archives and Manuscripts</h4>
           <p>The most comprehensive discovery system for archives and manuscripts ever produced by the Library, with over 9,000 collections. This evolving platform introduces several innovative approaches to the presentation of finding aids on the web including an intuitive single-page interface, component-level search, and access to digitized materials. Produced in close collaboration with the NYPL Manuscripts and Archives Division, with&nbsp;generous support of The Polonsky Foundation and The Hermione Foundation.&nbsp;</p>
         </li>
         <li>
-          <img src="http://placepuppy.it/450/200/" />
+          <img src="http://placecage.com/450/200/" />
           <h4>What's on the Menu?</h4>
           <p>The Library has been collecting restaurant menus for over a century, amassing one of the largest culinary archives in the world. To open up the collection online, we've&nbsp;enlisted the public's help in transcribing the actual contents of the menus: dishes, prices and other information of great value to researchers that,&nbsp;due to handwritten lettering, idiosyncratic typography and layouts, has been difficult to extract mechanically. The resulting database provides a powerful tool for researching the tastes, appetites and social fabric of the past. Thousands have participated in what is already one of the most successful documented library crowdsourcing projects, and the growing data set is now available via NYPL's first public API. A collaboration with NYPL's Rare Book Division, funded generously by&nbsp;the&nbsp;<a href="http://www.neh.gov" rel="nofollow">National Endowment for the Humanities</a>&nbsp;and the <a href="http://www.imls.gov" rel="nofollow">Institute for Library and Museum Services</a>.&nbsp;</p>
         </li>
         <li>
-          <img src="http://placepuppy.it/450/200/" />
+          <img src="http://placecage.com/450/200/" />
           <h4>Direct Me NYC: 1940</h4>
           <p>After 72 years, the National Archives has released the full set of records comprising the 1940 Federal Census - a milestone event for historians and genealogists studying documentary material of New Deal and Depression-era America. But finding a name among the millions of handwritten records is like looking for a needle in a haystack. In response, Labs worked with the <a href="http://www.nypl.org/milstein">Milstein Division</a> of United States History, Local History and Genealogy to build&nbsp;<em>Direct Me NYC: 1940</em>, a site that invites users to construct targeted searches of the census data via addresses found in 1940 New York City telephone directories. Patrons are also invited to share&nbsp;<a href="http://directme.nypl.org/latest">stories</a>&nbsp;about the people and addresses they've searched, building a cultural memory bank directly out of the pages of the phone book.</p>
         </li>
         <li>
-          <img src="http://placepuppy.it/450/200/" />
+          <img src="http://placecage.com/450/200/" />
           <h4>Stereogranimator</h4>
           <p><a href="http://www.huffingtonpost.com/the-new-york-public-library/new-perspectives-on-old-p_b_1233351.html" rel="nofollow">Inspired</a> by a library user's art project, the Stereogranimator is a browser-based tool for transforming over 40,000 historical stereographs into shareable, screen-friendly 3D formats. 19th century photography collides with early internet folk art as users remix vintage stereos into animated GIFs, bringing the past tantalizingly in reach with an eerie wiggle effect. 3D afficionados can also create red-blue anaglyphs, which, with the right glasses, recreate the incredible depth effect of these images. The site also features hundreds of stereographs from the Boston Public Library.</p>
         </li> -->
@@ -78,12 +79,15 @@
       </ul>
     </div>
     <div class="col col-med col-investigations">
+      <h2 class="col-title">Investigations</h2>
+    
       <ul class="clearfix">
 
 
         {{#foreach investigations}}
 
           <li>
+            {{header_image}}
             <h4><a style="color:#222" href="{{url}}">{{{title}}}</a></h4>
             <p>{{excerpt words="100"}}</p>
           </li>
@@ -93,27 +97,27 @@
 <!-- 
 
         <li>
-          <img src="http://placepuppy.it/300/150/" />
+          <img src="http://placecage.com/300/150/" />
           <h4>Ensemble Visualizer</h4>
           <p>Pancetta exercitation filet mignon, culpa beef ribs short loin short ribs pig nisi shank porchetta occaecat brisket. Id sunt t-bone, corned beef doner sirloin qui.</p>
         </li>
         <li>
-          <img src="http://placepuppy.it/300/150/" />
+          <img src="http://placecage.com/300/150/" />
           <h4>NYPL Archives Poster</h4>
           <p>Dolore elit eiusmod commodo corned beef. Tail ground round short loin sed biltong consectetur frankfurter.</p>
         </li>
         <li>
-          <img src="http://placepuppy.it/300/150/" />
+          <img src="http://placecage.com/300/150/" />
           <h4>Jefferson Market Library Oral History Project</h4>
           <p>Incididunt ut swine cillum. Filet mignon qui deserunt bacon laboris. Adipisicing pancetta dolore leberkas turkey et short ribs aute filet mignon id corned beef.</p>
         </li>
         <li>
-          <img src="http://placepuppy.it/300/150/" />
+          <img src="http://placecage.com/300/150/" />
           <h4>Finding Aid Relationizer</h4>
           <p>Id pork belly cupidatat, spare ribs ut esse andouille drumstick proident filet mignon turducken.</p>
         </li>
         <li>
-          <img src="http://placepuppy.it/300/150/" />
+          <img src="http://placecage.com/300/150/" />
           <h4>Offline Building Inspector</h4>
           <p>Dolor ham shankle ad exercitation beef ribs proident tri-tip biltong in eu. Ea tongue incididunt cow.</p>
         </li> -->
@@ -122,9 +126,12 @@
       </ul>
     </div>
     <div class="col col-sml col-blog">
+    
+      <h2 class="col-title">Blog</h2>
+    
       <ul class="clearfix">
 
-        {{#foreach investigations}}
+        {{#foreach blog}}
 
           <li>
             <h4><a style="color:#222" href="{{url}}">{{{title}}}</a></h4>
