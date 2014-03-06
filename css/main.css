@@ -53,6 +53,9 @@ a:hover {
   margin: 10px 0 0 10px;
   padding: 0;
 }
+.top-bar h1 a {
+  color: #222;
+}
 .nav {
   float: right;
   margin: 0 10px 0 0;
@@ -71,6 +74,8 @@ a:hover {
   margin-top: 100px;
   overflow: hidden;
   overflow-y: auto;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 .col-header {
   margin-top: 0;
@@ -129,6 +134,27 @@ a:hover {
     width: 25%;
     left: 75%;
   }
+}
+
+#projects .col,
+#investigations .col,
+#blog .col {
+  overflow: hidden;
+  opacity: 0;
+}
+#projects .col.active,
+#investigations .col.active,
+#blog .col.active {
+  width: 100%;
+  left: 0;
+  opacity: 1;
+  overflow-y: auto;
+}
+.col.active li {
+  float: left;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
 }
 
 .icon {
