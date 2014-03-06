@@ -11,11 +11,11 @@ textarea {
 
 html {
   font-size: 1em;
-  line-height: 1.4;  
+  line-height: 1.4;
 }
+
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 900;
-  text-transform: uppercase;
+  font-weight: 700;
 }
 ul {
   margin: 0;
@@ -73,31 +73,30 @@ a {
 .col ul {
   margin: 0 10px;
 }
-.col-big {  
+.col-big {
   width: 50%;
   left: 0;
 }
-.col-med {  
+.col-med {
   width: 33.3333333333%;
   left: 50%;
 }
-.col-sml {  
+.col-sml {
   width: 16.6666666667%;
   left: 83.3333333333%;
 }
 .col-big ul {
-  background: #999;
+  background: rgba(10,10,10,.5);
 }
 .col-med ul {
-  background: #bbb;
+background: rgba(100,100,100,.5);
 }
 .col-sml ul {
-  background: #eee;
+background: rgba(200,200,200,.5);
 }
 .col h2 {
   margin: 0;
-  padding: 0;
-  text-align: center;
+  padding: 0 24px;
 }
 .col li {
   padding: 12px;
@@ -120,7 +119,7 @@ a {
 }
 
 .icon {
-  font-family: 'icomoon';  
+  font-family: 'icomoon';
   display: inline-block;
   width: auto;
   height: auto;
@@ -158,7 +157,7 @@ a {
   src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
        url('../fonts/icomoon.svg#icomoon') format('svg'),
        url('../fonts/icomoon.woff') format('woff'),
-       url('../fonts/icomoon.ttf') format('truetype'); 
+       url('../fonts/icomoon.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
