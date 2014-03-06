@@ -10,6 +10,11 @@ a {
 a:hover {
   color: #32b8e5;
 }
+hr {
+  border-color: #ccc;
+  border-style: dashed;
+  margin: 20px 0;
+}
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -139,9 +144,21 @@ background: rgba(200,200,200,.5);
 
 article {
   width: 800px;
-  margin: 40px auto;
+  margin: 50px auto;
   padding: 20px;
   background: #eee;
+}
+article p {
+  font-size: 1.3em;
+}
+.post-title {
+  font-size: 2em;
+  margin-bottom: 0.3em;
+}
+article article {
+  width: auto;
+  margin: 10px 0;
+  padding: 0;
 }
 
 .icon {
