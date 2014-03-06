@@ -97,23 +97,13 @@ a:hover {
   left: 83.3333333333%;
 }
 .col-big ul {
-<<<<<<< HEAD
-  background: rgba(10,10,10,.5);
+background: rgba(10,10,10,.5);
 }
 .col-med ul {
 background: rgba(100,100,100,.5);
 }
 .col-sml ul {
 background: rgba(200,200,200,.5);
-=======
-  background: #ccc;
-}
-.col-med ul {
-  background: #eee;
-}
-.col-sml ul {
-  background: #f1f1f1;
->>>>>>> 6bc4dfa8e33ce99f4ce625309dbce54e89826fbf
 }
 .col h2 {
   margin: 0;
