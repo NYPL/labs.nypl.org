@@ -23,7 +23,11 @@ ul {
   list-style: none;
 }
 a {
+  text-decoration: none;
   color: #0090c4;
+}
+a:hover {
+  color: #32b8e5;
 }
 
 ::-moz-selection {
@@ -46,15 +50,17 @@ a {
 }
 .top-bar h1 {
   float: left;
-  margin: 10px 0 0 20px;
+  margin: 10px 0 0 10px;
   padding: 0;
 }
 .nav {
   float: right;
-  margin: 10px 20px 0 0;
+  margin: 0 10px 0 0;
 }
 .nav li {
   display: inline-block;
+  margin-right: 6px;
+  padding: 10px;
 }
 
 .col {
@@ -62,7 +68,7 @@ a {
   height: 100%;
   top: 0;
   padding-top: 0;
-  margin-top: 120px;
+  margin-top: 100px;
   overflow: hidden;
   overflow-y: auto;
 }
@@ -86,18 +92,24 @@ a {
   left: 83.3333333333%;
 }
 .col-big ul {
-  background: #999;
+  background: #ccc;
 }
 .col-med ul {
-  background: #bbb;
+  background: #eee;
 }
 .col-sml ul {
-  background: #eee;
+  background: #f1f1f1;
 }
 .col h2 {
   margin: 0;
   padding: 0;
   text-align: center;
+}
+.col h2 a {
+  color: #222;
+}
+.col h2 a:hover {
+  color: #0090c4;
 }
 .col li {
   padding: 12px;
