@@ -1,3 +1,5 @@
+NYPL Labs template
+=======
 # [Ghost](https://github.com/TryGhost/Ghost) [![Build Status](https://travis-ci.org/TryGhost/Ghost.png?branch=master)](https://travis-ci.org/TryGhost/Ghost)
 
 Ghost is a free, open, simple blogging platform that's available to anyone who wants to use it. Lovingly created and maintained by [John O'Nolan](http://twitter.com/JohnONolan) + [Hannah Wolfe](http://twitter.com/ErisDS) + an amazing group of [contributors](https://github.com/TryGhost/Ghost/contributors).
@@ -14,7 +16,7 @@ Want to report a bug, request a feature, or help us build or translate Ghost? Ch
 
 There are **two** main ways to get started with Ghost, take care to use the method which best suits your needs.
 
-**Please note** - the downloadable zip files we provide on [Ghost.org](http://ghost.org/download) are pre-built packages designed for getting started quickly. Cloning from the git repository requires you to install several dependencies and build the assets yourself. 
+**Please note** - the downloadable zip files we provide on [Ghost.org](http://ghost.org/download) are pre-built packages designed for getting started quickly. Cloning from the git repository requires you to install several dependencies and build the assets yourself.
 
 ### Getting Started Guide for Bloggers
 
@@ -23,7 +25,7 @@ If you just want to get a Ghost blog running in the fastest time possible, this 
 For detailed instructions for various platforms visit the [Ghost Installation Guide](http://docs.ghost.org/installation/). If you get stuck, help is available on [our forum](http://ghost.org/forum/).
 
 1. Install [Node.js](http://nodejs.org) - Ghost requires **Node v0.10.**
-1. Download the latest Ghost package from [Ghost.org](http://ghost.org/download). 
+1. Download the latest Ghost package from [Ghost.org](http://ghost.org/download).
    **If you cloned the GitHub repository you should follow the instructions [for developers](https://github.com/TryGhost/Ghost#getting-started-guide-for-developers).**
 1. Create a new directory where you would like to run the code, and unzip the package to that location.
 1. Fire up a terminal (or node command prompt in Windows) and change directory to the root of the Ghost application (where config.example.js and index.js are)
