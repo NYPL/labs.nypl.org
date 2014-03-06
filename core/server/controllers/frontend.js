@@ -89,7 +89,7 @@ frontendControllers = {
 					}
 				};
 
-        return getPostPage(options[projects]).then(function (page) {
+        return getPostPage(options.projects).then(function (page) {
 
             // If page is greater than number of pages we have, redirect to last page
             if (pageParam > page.pages) {
