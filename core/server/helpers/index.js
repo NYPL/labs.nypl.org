@@ -314,6 +314,7 @@ coreHelpers.excerpt = function (options) {
 
 coreHelpers.header_image = function (options) {
     var img = String(this.html).match(/<img[^>]+>/i)
+		if(!img) return '';
     return new hbs.handlebars.SafeString(img);
 };
 

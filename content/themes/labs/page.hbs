@@ -29,4 +29,12 @@
 
     </article>
 
+		<h3>Related Posts</h3>
+
+		{{#related_posts}}
+			{{header_image}}
+			<br /><span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{tags prefix="on "}}</span>
+			<br /><a href="{{url}}">{{{title}}}</a>
+			<p>{{excerpt}}</p>
+		{{/related_posts}}
 </main>

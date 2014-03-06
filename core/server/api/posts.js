@@ -13,16 +13,8 @@ posts = {
     browse: function browse(options) {
         options = options || {};
 
-				for(var k in options) {
-					console.log("  pre opts[" + k + "] = " + options[k]);
-				}
-        // **returns:** a promise for a page of posts in a json object
-
         return dataProvider.Post.findPage(options).then(function (result) {
 
-					for(var k in options) {
-						console.log("  postpre opts[" + k + "] = " + options[k]);
-					}
             var i = 0,
                 omitted = result;
 

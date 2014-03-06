@@ -210,6 +210,8 @@ frontendControllers = {
             editFormat,
             usingStaticPermalink = false;
 
+				var template_data = {};
+
         api.settings.read('permalinks').then(function (permalink) {
             editFormat = permalink.value[permalink.value.length - 1] === '/' ? ':edit?' : '/:edit?';
 
@@ -239,20 +241,22 @@ frontendControllers = {
             var postLookup = _.pick(permalink.params, 'slug', 'id');
 
             // Query database to find post
-            return api.posts.read(postLookup);
+						return api.posts.read(postLookup);
+
         }).then(function (post) {
-						for(var k in post) { console.log(" [" + k + "] = " + post[k]); }
+						// for(var k in post) { console.log(" [" + k + "] = " + post[k]); }
 
 						// Fetch related posts
-						return getPostPage({}).then(function (page) {
-							var related_posts = page.posts;
-							return [post, related_posts];
+						return getPostPage({tag: post.slug}).then(function (page) {
+							if(page.posts)
+								template_data.related_posts = page.posts;
+							template_data.post = post;
+
+							return template_data.post;
 						}).otherwise(handleError(next));
 
-        }).then(function (_post) {
-						var post = _post[0];
-						var related_posts = _post[1];
 
+        }).then(function (post) {
             if (!post) {
                 return next();
             }
@@ -267,10 +271,8 @@ frontendControllers = {
                         var paths = config().paths.availableThemes[activeTheme.value],
                             view = template.getThemeViewForPost(paths, post);
 
-												for(var k in related_posts) {
-													console.log('posts[' + k + '] = ', related_posts[k]);
-												}
-                        res.render(view, {post: post, related_posts: related_posts});
+												template_data.post = post;
+                        res.render(view, template_data); // {post: post, related_posts: related_posts});
                     });
                 });
             }
