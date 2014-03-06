@@ -125,7 +125,7 @@ frontendControllers = {
 
 							template_data.blog = posts;
 
-							res.render('homepage', template_data);
+							res.render('index', template_data);
             });
 					});
 
