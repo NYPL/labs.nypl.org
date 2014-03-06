@@ -22,6 +22,9 @@ ul {
   padding: 0;
   list-style: none;
 }
+a {
+  color: #0090c4;
+}
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -43,11 +46,12 @@ ul {
 }
 .top-bar h1 {
   float: left;
-  margin: 0;
+  margin: 10px 0 0 20px;
   padding: 0;
 }
 .nav {
   float: right;
+  margin: 10px 20px 0 0;
 }
 .nav li {
   display: inline-block;
@@ -58,6 +62,8 @@ ul {
   height: 100%;
   top: 0;
   padding-top: 60px;
+  overflow: hidden;
+  overflow-y: auto;
 }
 .col-big {
   background: #999;
@@ -99,6 +105,30 @@ ul {
   }
 }
 
+#home-container {
+}
+
+.icon {
+  font-family: 'icomoon';  
+  display: inline-block;
+  width: auto;
+  height: auto;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-weight: normal;
+  font-variant: normal;
+}
+.icon-nypl:before {
+  content: "N";
+}
+
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -109,4 +139,15 @@ ul {
 }
 .clearfix {
   *zoom: 1;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot');
+  src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/icomoon.svg#icomoon') format('svg'),
+       url('../fonts/icomoon.woff') format('woff'),
+       url('../fonts/icomoon.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
 }
