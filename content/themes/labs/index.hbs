@@ -28,7 +28,21 @@
     </div>
 
     <div class="col col-big col-projects">
+
+
+
+
       <ul class="clearfix">
+
+        {{#foreach projects}}
+          <li>
+            {{header_image}}
+            <h4><a style="color:#222" href="{{url}}">{{{title}}}</a></h4>
+            <p>{{excerpt words="100"}}... <a style="color:#222" href="{{url}}">Read more.</a></p>
+          </li>
+        {{/foreach}}
+
+<!-- 
         <li>
           <img src="http://placepuppy.it/450/200/" />
           <h4>Building Inspector</h4>
@@ -58,11 +72,27 @@
           <img src="http://placepuppy.it/450/200/" />
           <h4>Stereogranimator</h4>
           <p><a href="http://www.huffingtonpost.com/the-new-york-public-library/new-perspectives-on-old-p_b_1233351.html" rel="nofollow">Inspired</a> by a library user's art project, the Stereogranimator is a browser-based tool for transforming over 40,000 historical stereographs into shareable, screen-friendly 3D formats. 19th century photography collides with early internet folk art as users remix vintage stereos into animated GIFs, bringing the past tantalizingly in reach with an eerie wiggle effect. 3D afficionados can also create red-blue anaglyphs, which, with the right glasses, recreate the incredible depth effect of these images. The site also features hundreds of stereographs from the Boston Public Library.</p>
-        </li>
+        </li> -->
+
+
       </ul>
     </div>
     <div class="col col-med col-investigations">
       <ul class="clearfix">
+
+
+        {{#foreach investigations}}
+
+          <li>
+            {{header_image}}
+            <h4><a style="color:#222" href="{{url}}">{{{title}}}</a></h4>
+            <p>{{excerpt words="100"}}</p>
+          </li>
+
+
+        {{/foreach}}
+<!-- 
+
         <li>
           <img src="http://placepuppy.it/300/150/" />
           <h4>Ensemble Visualizer</h4>
@@ -87,11 +117,24 @@
           <img src="http://placepuppy.it/300/150/" />
           <h4>Offline Building Inspector</h4>
           <p>Dolor ham shankle ad exercitation beef ribs proident tri-tip biltong in eu. Ea tongue incididunt cow.</p>
-        </li>
+        </li> -->
+
+
       </ul>
     </div>
     <div class="col col-sml col-blog">
       <ul class="clearfix">
+
+        {{#foreach investigations}}
+
+          <li>
+            <h4><a style="color:#222" href="{{url}}">{{{title}}}</a></h4>
+            <p>{{excerpt words="100"}}</p>
+          </li>
+
+
+        {{/foreach}}
+      <!-- 
         <li>
           <h4>NYPL Labs at Bit By Bit</h4>
           <p>Some text snippet here with not that many words.</p>
@@ -115,7 +158,9 @@
         <li>
           <h4>Some other event</h4>
           <p><span class="date">June 1:</span> Turducken cupidatat doner elit jerky.</p>
-        </li>
+        </li> -->
+
+
       </ul>
     </div>
   </div>
