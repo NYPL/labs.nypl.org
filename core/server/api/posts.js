@@ -13,9 +13,16 @@ posts = {
     browse: function browse(options) {
         options = options || {};
 
+				for(var k in options) {
+					console.log("  pre opts[" + k + "] = " + options[k]);
+				}
         // **returns:** a promise for a page of posts in a json object
 
         return dataProvider.Post.findPage(options).then(function (result) {
+
+					for(var k in options) {
+						console.log("  postpre opts[" + k + "] = " + options[k]);
+					}
             var i = 0,
                 omitted = result;
 
@@ -23,6 +30,14 @@ posts = {
                 omitted.posts[i].author = _.omit(omitted.posts[i].author, filteredUserAttributes);
                 omitted.posts[i].user = _.omit(omitted.posts[i].user, filteredUserAttributes);
             }
+						console.log("returning " + omitted.posts.length + " posts for opts:");
+						for(var k in options) {
+							console.log("  opts[" + k + "] = " + options[k]);
+						}
+						for(var i=0;i<omitted.posts.length;i++) {
+							var p = omitted.posts[i];
+							console.log("  " + i + ": " + p.title);
+						}
             return omitted;
         });
     },

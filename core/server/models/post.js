@@ -240,6 +240,10 @@ Post = ghostBookshelf.Model.extend({
             tagInstance = opts.tag !== undefined ? Tag.forge({slug: opts.tag}) : false,
             permittedOptions = ['page', 'limit', 'status', 'staticPages'];
 
+				console.log('   ::: findPage got tag? ', tagInstance);
+				for(var k in opts) {
+					console.log("    findPage[" + k + "] = " + opts[k]);
+				}
         // sanitize opts so we are not automatically passing through any and all
         // query strings to Bookshelf / Knex. Although the API requires auth, we
         // should prevent this until such time as we can design the API properly and safely.
@@ -298,6 +302,7 @@ Post = ghostBookshelf.Model.extend({
                 // If we have a tag instance we need to modify our query.
                 // We need to ensure we only select posts that contain
                 // the tag given in the query param.
+								console.log('     joining tags? ' + tagInstance.id);
                 if (tagInstance) {
                     postCollection
                         .query('join', 'posts_tags', 'posts_tags.post_id', '=', 'posts.id')
