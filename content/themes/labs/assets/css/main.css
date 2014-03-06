@@ -10,6 +10,11 @@ a {
 a:hover {
   color: #32b8e5;
 }
+hr {
+  border-color: #ccc;
+  border-style: dashed;
+  margin: 20px 0;
+}
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -78,13 +83,13 @@ a:hover {
   left: 83.3333333333%;
 }
 .col-big ul {
-background: rgba(10,10,10,.5);
+background: rgba(175,175,175,.5);
 }
 .col-med ul {
-background: rgba(100,100,100,.5);
+background: rgba(200,200,200,.5);
 }
 .col-sml ul {
-background: rgba(200,200,200,.5);
+background: rgba(225,225,225,.5);
 }
 .col h2 {
   margin: 0;
@@ -135,6 +140,25 @@ background: rgba(200,200,200,.5);
   width: 300px;
   height: 300px;
   overflow: hidden;
+}
+
+article {
+  width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #eee;
+}
+article p {
+  font-size: 1.3em;
+}
+.post-title {
+  font-size: 2em;
+  margin-bottom: 0.3em;
+}
+article article {
+  width: auto;
+  margin: 10px 0;
+  padding: 0;
 }
 
 .icon {
