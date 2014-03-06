@@ -1,0 +1,68 @@
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+html {
+}
+
+body {
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 1em; /* 14px */
+  line-height: 1.2857em; /* 18px */
+  margin: 0 0 1.2857em 0;
+}
+
+.col h2 {
+  font-size: 2em; /* 28px */
+  line-height: 1.2857em; /* 18px */
+  text-transform: uppercase;
+}
+
+/* big column type */
+.col-big h4 {
+  font-size: 1.7143em; /* 24px */
+  line-height: 1.5000em; /* 36px */
+}
+.col-big p {
+  font-size: 1.2857em; /* 18px */
+  line-height: 1.50000em; /* 18px */
+  margin-bottom: 1.50000em;  margin-top: 0.0000em;
+}
+
+/* med column type */
+.col-med h4 {
+  font-size: 1.5714em; /* 22px */
+  line-height: 1.6364em; /* 36px */
+}
+.col-med p {
+  font-size: 1.1429em; /* 16px */
+  line-height: 1.1250em; /* 18px */
+  margin-bottom: 1.1250em;  margin-top: 0.0000em;
+}
+
+/* small column type */
+.col-sml h4 {
+  font-size: 1.4286em; /* 20px */
+  line-height: 1em; /* 14px */
+}
+.col-sml p {
+  font-size: 1.0000em; /* 14px */
+  line-height: 1.2857em; /* 18px */
+  margin-bottom: 1.2857em;  margin-top: 0.0000em;
+}

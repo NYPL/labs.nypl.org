@@ -137,13 +137,6 @@ background: rgba(200,200,200,.5);
   overflow: hidden;
 }
 
-article {
-  width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  background: #eee;
-}
-
 .icon {
   font-family: 'icomoon';
   display: inline-block;
