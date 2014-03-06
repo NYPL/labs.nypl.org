@@ -61,24 +61,38 @@ a {
   position: fixed;
   height: 100%;
   top: 0;
-  padding-top: 60px;
+  padding-top: 0;
+  margin-top: 120px;
   overflow: hidden;
   overflow-y: auto;
 }
-.col-big {
-  background: #999;
+.col-header {
+  margin-top: 0;
+  padding-top: 60px;
+}
+.col ul {
+  margin: 0 10px;
+}
+.col-big {  
   width: 50%;
   left: 0;
 }
-.col-med {
-  background: #bbb;
+.col-med {  
   width: 33.3333333333%;
   left: 50%;
 }
-.col-sml {
-  background: #eee;
+.col-sml {  
   width: 16.6666666667%;
   left: 83.3333333333%;
+}
+.col-big ul {
+  background: #999;
+}
+.col-med ul {
+  background: #bbb;
+}
+.col-sml ul {
+  background: #eee;
 }
 .col h2 {
   margin: 0;
@@ -103,9 +117,6 @@ a {
     width: 25%;
     left: 75%;
   }
-}
-
-#home-container {
 }
 
 .icon {
