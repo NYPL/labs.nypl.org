@@ -83,13 +83,13 @@ hr {
   left: 83.3333333333%;
 }
 .col-big ul {
-background: rgba(10,10,10,.5);
+background: rgba(175,175,175,.5);
 }
 .col-med ul {
-background: rgba(100,100,100,.5);
+background: rgba(200,200,200,.5);
 }
 .col-sml ul {
-background: rgba(200,200,200,.5);
+background: rgba(225,225,225,.5);
 }
 .col h2 {
   margin: 0;
