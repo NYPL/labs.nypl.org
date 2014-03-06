@@ -79,27 +79,55 @@ frontendControllers = {
 				var options = {
 					projects: {
 						limit: 10,
-						staticPage: true,
+						staticPages: true,
 						tag: 'projects'
 					},
 
 					investigations: {
 						limit: 10,
 						tag: 'investigations'
+					},
+
+					blog: {
+						limit: 10
 					}
 				};
 
+				var template_data = {};
+
+				console.log("_______________________________________");
         return getPostPage(options.projects).then(function (page) {
+					return filters.doFilter('prePostsRender', page.posts).then(function (posts) {
 
-            // If page is greater than number of pages we have, redirect to last page
-            if (pageParam > page.pages) {
-                return res.redirect(page.pages === 1 ? config().paths.subdir + '/' : (config().paths.subdir + '/page/' + page.pages + '/'));
-            }
+						template_data.projects = posts;
+					});
 
-            // Render the page of posts
+
+        }).then(function () {
+
+					console.log("_______________________________________");
+					for(var k in options.investigations) { console.log(" invest opts " + k + ": " + options.investigations[k]); }
+					return getPostPage(options.investigations).then(function(page) {
+
             filters.doFilter('prePostsRender', page.posts).then(function (posts) {
-                res.render('index', formatPageResponse(posts, page));
+
+							template_data.investigations = posts;
             });
+					});
+
+        }).then(function () {
+
+					console.log("_______________________________________");
+					getPostPage(options.blog).then(function(page) {
+
+            filters.doFilter('prePostsRender', page.posts).then(function (posts) {
+							// for(var k in posts[0]) { console.log(" posts[" + k + "] = " + posts[0][k]); }
+
+							template_data.blog = posts;
+
+							res.render('index', template_data);
+            });
+					});
 
         }).otherwise(handleError(next));
 
@@ -216,7 +244,7 @@ frontendControllers = {
 						for(var k in post) { console.log(" [" + k + "] = " + post[k]); }
 
 						// Fetch related posts
-						return getPostPage({tag: 'investigation', staticPages: true}).then(function (page) {
+						return getPostPage({}).then(function (page) {
 							var related_posts = page.posts;
 							return [post, related_posts];
 						}).otherwise(handleError(next));
