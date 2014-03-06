@@ -312,6 +312,12 @@ coreHelpers.excerpt = function (options) {
     );
 };
 
+coreHelpers.header_image = function (options) {
+    var img = String(this.html).match(/<img[^>]+>/i)
+    return new hbs.handlebars.SafeString(img);
+};
+
+
 // ### Filestorage helper
 //
 // *Usage example:*
@@ -763,6 +769,8 @@ registerHelpers = function (adminHbs, assetHash) {
     registerThemeHelper('encode', coreHelpers.encode);
 
     registerThemeHelper('excerpt', coreHelpers.excerpt);
+
+    registerThemeHelper('header_image', coreHelpers.header_image);
 
     registerThemeHelper('foreach', coreHelpers.foreach);
 
