@@ -11,11 +11,11 @@ textarea {
 
 html {
   font-size: 1em;
-  line-height: 1.4;  
+  line-height: 1.4;
 }
+
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 900;
-  text-transform: uppercase;
+  font-weight: 700;
 }
 ul {
   margin: 0;
@@ -53,6 +53,9 @@ a:hover {
   margin: 10px 0 0 10px;
   padding: 0;
 }
+.top-bar h1 a {
+  color: #222;
+}
 .nav {
   float: right;
   margin: 0 10px 0 0;
@@ -71,6 +74,8 @@ a:hover {
   margin-top: 100px;
   overflow: hidden;
   overflow-y: auto;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 .col-header {
   margin-top: 0;
@@ -79,31 +84,30 @@ a:hover {
 .col ul {
   margin: 0 10px;
 }
-.col-big {  
+.col-big {
   width: 50%;
   left: 0;
 }
-.col-med {  
+.col-med {
   width: 33.3333333333%;
   left: 50%;
 }
-.col-sml {  
+.col-sml {
   width: 16.6666666667%;
   left: 83.3333333333%;
 }
 .col-big ul {
-  background: #ccc;
+background: rgba(10,10,10,.5);
 }
 .col-med ul {
-  background: #eee;
+background: rgba(100,100,100,.5);
 }
 .col-sml ul {
-  background: #f1f1f1;
+background: rgba(200,200,200,.5);
 }
 .col h2 {
   margin: 0;
-  padding: 0;
-  text-align: center;
+  padding: 0 24px;
 }
 .col h2 a {
   color: #222;
@@ -131,8 +135,29 @@ a:hover {
   }
 }
 
+#projects .col,
+#investigations .col,
+#blog .col {
+  overflow: hidden;
+  opacity: 0;
+}
+#projects .col.active,
+#investigations .col.active,
+#blog .col.active {
+  width: 100%;
+  left: 0;
+  opacity: 1;
+  overflow-y: auto;
+}
+.col.active li {
+  float: left;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+
 .icon {
-  font-family: 'icomoon';  
+  font-family: 'icomoon';
   display: inline-block;
   width: auto;
   height: auto;
@@ -170,7 +195,7 @@ a:hover {
   src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
        url('../fonts/icomoon.svg#icomoon') format('svg'),
        url('../fonts/icomoon.woff') format('woff'),
-       url('../fonts/icomoon.ttf') format('truetype'); 
+       url('../fonts/icomoon.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
